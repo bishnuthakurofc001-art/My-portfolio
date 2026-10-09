@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Akzidenz Grotesk Pro';
+  src: url('https://cdn.prod.website-files.com/6a2fcc5552066493ef9a5cf9/6a3068329e43bb7aab788e8d_AkzidenzGroteskPro-Md.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --_colors---background--bg: #dfdfdf;
+  --_colors---fill--primary: #111111;
+  --_colors---text--primary: #111111;
+  --_colors---theme--dot: #dfdfdf;
+}
+
+.theme-mode-base {
+  --_colors---background--bg: #dfdfdf;
+  --_colors---fill--primary: #111111;
+  --_colors---text--primary: #111111;
+  --_colors---theme--dot: #dfdfdf;
+}
+
+.theme-mode-1 {
+  --_colors---background--bg: #b4b7c0;
+  --_colors---fill--primary: #111111;
+  --_colors---text--primary: #111111;
+  --_colors---theme--dot: #b4b7c0;
+}
+
+.theme-mode-2 {
+  --_colors---background--bg: #f25e3a;
+  --_colors---fill--primary: #111111;
+  --_colors---text--primary: #111111;
+  --_colors---theme--dot: #f25e3a;
+}
+
+.theme-mode-3 {
+  --_colors---background--bg: #8a9641;
+  --_colors---fill--primary: #111111;
+  --_colors---text--primary: #111111;
+  --_colors---theme--dot: #8a9641;
+}
+
+.theme-mode-4 {
+  --_colors---background--bg: #b41d23;
+  --_colors---fill--primary: #111111;
+  --_colors---text--primary: #ffffff;
+  --_colors---theme--dot: #b41d23;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--_colors---background--bg, #dfdfdf);
+  color: var(--_colors---text--primary, #111111);
+  font-family: 'Akzidenz Grotesk Pro', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  transition: background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--_colors---text--primary, #111111);
+  color: var(--_colors---background--bg, #dfdfdf);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
